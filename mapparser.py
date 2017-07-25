@@ -7,6 +7,7 @@ DATASET = "san-jose_california.osm"
 PATH = "./"
 OSMFILE = PATH + DATASET
 
+
 def count_tags(filename):
     tags = {}
     for event, elem in ET.iterparse(filename):

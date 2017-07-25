@@ -72,18 +72,22 @@ def update_name(name, mapping):
 
 def test():
     st_types = audit(OSMFILE)
-    # print out dictonary of potentially incorrect street types
-    pprint.pprint(dict(st_types))
-
-    for st_type, ways in st_types.items():  # .iteritems() for python2
+    # pprint.pprint(dict(st_types)) #print out dictonary of potentially incorrect street types
+    print_limit = 10
+    for st_type, ways in st_types.items(): # .iteritems() for python2
         for name in ways:
             if street_type_re.search(name).group() in mapping:
                 better_name = update_name(name, mapping)
-                print (name, "=>", better_name)
+                if print_limit > 0:
+                    print_limit -= 1
+                    print (name, "=>", better_name)
+                else:
+                    break
 
 
 if __name__ == '__main__':
     test()
+
 
 def test():
     users = unique_user_ID(OSMFILE)

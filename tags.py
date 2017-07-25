@@ -11,6 +11,7 @@ lower = re.compile(r'^([a-z]|_)*$')
 lower_colon = re.compile(r'^([a-z]|_)*:([a-z]|_)*$')
 problemchars = re.compile(r'[=\+/&<>;\'"\?%#$@\,\. \t\r\n]')
 
+
 def key_type(element, keys):
     if element.tag == "tag":
         key = element.attrib['k']
@@ -24,15 +25,18 @@ def key_type(element, keys):
             keys['other'] += 1
     return keys
 
+
 def process_map_tags(filename):
     keys = {"lower": 0, "lower_colon": 0, "problemchars": 0, "other": 0}
     for _, element in ET.iterparse(filename):
         keys = key_type(element, keys)
     return keys
 
+
 def test():
     keys = process_map_tags(OSMFILE)
     pprint.pprint(keys)
+
 
 if __name__ == '__main__':
     test()
