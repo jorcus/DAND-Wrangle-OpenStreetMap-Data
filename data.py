@@ -4,7 +4,7 @@ from pymongo import MongoClient
 import xml.etree.ElementTree as ET
 from tags import problemchars
 from audit import update_name, mapping
-from users import structure_user_id
+from users import structure_single_user_id
 
 DATASET = "san-jose_california.osm"
 PATH = "./"
@@ -24,10 +24,10 @@ def shape_element(element):
                 "changeset": element.get("changeset"),
                 "timestamp": element.get("timestamp"),
                 "user": element.get("user"),
-                "uid": element.get("uid")
+                "uid": structure_single_user_id(element.get("uid"))
             }
         }
-        print(element.get("uid"))
+
         if element.find("tag") is not None:
             for tag in element.iter("tag"):
                 # Only add address node = {} when any of address elements exist.
@@ -40,7 +40,7 @@ def shape_element(element):
                 if tag.attrib['k'] == "addr:postcode":
                     node["address"]["postcode"] = tag.attrib['v']
                 if tag.attrib['k'] == "addr:street":
-                    node["address"]["street"] = tag.attrib['v']
+                    node["address"]["street"] = update_name(tag.attrib['v'], mapping)
                 if tag.attrib['k'] == "amenity":
                     node["amenity"] = tag.attrib['v']
                 if tag.attrib['k'] == "cuisine":
