@@ -11783,7 +11783,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Problems-Encountered-in-the-Map">Problems Encountered in the Map<a class="anchor-link" href="#Problems-Encountered-in-the-Map">&#182;</a></h2><p>Discuss the five main problems with the data in the following order:</p>
+<h2 id="Problems-Encountered-in-the-Map">Problems Encountered in the Map<a class="anchor-link" href="#Problems-Encountered-in-the-Map">&#182;</a></h2><p>Discuss the main problems with the data in the following order:</p>
 <ul>
 <li><p>Over­abbreviated street names (“S Tryon St Ste 105”)</p>
 </li>
@@ -11958,14 +11958,18 @@ Numbers of tag elements:  4599618
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Number-of-Unique-Users">Number of Unique Users<a class="anchor-link" href="#Number-of-Unique-Users">&#182;</a></h3><p>As you can see, each of the user has their own unique ID. However, the ID is unstructured likes 1, 1005885, 1030, 100744. I structured all the unique user id.</p>
+<h3 id="Number-of-Unique-Users">Number of Unique Users<a class="anchor-link" href="#Number-of-Unique-Users">&#182;</a></h3><p>As you can see, each of the user has their own unique ID. However, the ID is unstructured likes 1, 1005885, 1030, 100744. I structured all the unique user id in the followings:</p>
+<ul>
+<li>25663 =&gt; 0025663</li>
+<li>951370 =&gt; 0951370</li>
+</ul>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># users.py</span>
@@ -12012,16 +12016,16 @@ Numbers of tag elements:  4599618
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Number of users:  1359
 User ID maximum length 7
-21694 =&gt; 0021694
-396203 =&gt; 0396203
-573196 =&gt; 0573196
-446933 =&gt; 0446933
-253748 =&gt; 0253748
-158628 =&gt; 0158628
-177477 =&gt; 0177477
-183795 =&gt; 0183795
-500006 =&gt; 0500006
-161873 =&gt; 0161873
+25663 =&gt; 0025663
+951370 =&gt; 0951370
+199089 =&gt; 0199089
+637707 =&gt; 0637707
+28145 =&gt; 0028145
+941449 =&gt; 0941449
+281267 =&gt; 0281267
+41907 =&gt; 0041907
+166129 =&gt; 0166129
+173623 =&gt; 0173623
 </pre>
 </div>
 </div>
@@ -12045,7 +12049,7 @@ User ID maximum length 7
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#audit.py</span>
@@ -12083,16 +12087,16 @@ User ID maximum length 7
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Seaboard Ave =&gt; Seaboard Avenue
-Cherry Ave =&gt; Cherry Avenue
-Greenbriar Ave =&gt; Greenbriar Avenue
-Blake Ave =&gt; Blake Avenue
-Walsh Ave =&gt; Walsh Avenue
-E Duane Ave =&gt; E Duane Avenue
+<pre>Hillsdale Ave =&gt; Hillsdale Avenue
 Meridian Ave =&gt; Meridian Avenue
+Walsh Ave =&gt; Walsh Avenue
+Seaboard Ave =&gt; Seaboard Avenue
+N Blaney Ave =&gt; N Blaney Avenue
+Saratoga Ave =&gt; Saratoga Avenue
+1425 E Dunne Ave =&gt; 1425 E Dunne Avenue
+Blake Ave =&gt; Blake Avenue
 The Alameda Ave =&gt; The Alameda Avenue
 Hollenbeck Ave =&gt; Hollenbeck Avenue
-Foxworthy Ave =&gt; Foxworthy Avenue
 </pre>
 </div>
 </div>
@@ -12111,7 +12115,7 @@ Foxworthy Ave =&gt; Foxworthy Avenue
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># data.py</span>
@@ -12127,7 +12131,7 @@ Foxworthy Ave =&gt; Foxworthy Avenue
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -12143,7 +12147,7 @@ Foxworthy Ave =&gt; Foxworthy Avenue
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[11]:</div>
+<div class="prompt output_prompt">Out[7]:</div>
 
 
 
@@ -12151,7 +12155,7 @@ Foxworthy Ave =&gt; Foxworthy Avenue
 <div class="output_text output_subarea output_execute_result">
 <pre>{&#39;created&#39;: {&#39;changeset&#39;: &#39;11686320&#39;,
   &#39;timestamp&#39;: &#39;2012-05-24T03:24:59Z&#39;,
-  &#39;uid&#39;: &#39;14293&#39;,
+  &#39;uid&#39;: &#39;0014293&#39;,
   &#39;user&#39;: &#39;KindredCoda&#39;,
   &#39;version&#39;: &#39;10&#39;},
  &#39;id&#39;: &#39;25457954&#39;,
@@ -12176,7 +12180,7 @@ Foxworthy Ave =&gt; Foxworthy Avenue
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">pymongo</span> <span class="k">import</span> <span class="n">MongoClient</span>
@@ -12193,7 +12197,7 @@ Foxworthy Ave =&gt; Foxworthy Avenue
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">collection</span>
@@ -12209,7 +12213,7 @@ Foxworthy Ave =&gt; Foxworthy Avenue
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[13]:</div>
+<div class="prompt output_prompt">Out[9]:</div>
 
 
 
@@ -12226,7 +12230,7 @@ Foxworthy Ave =&gt; Foxworthy Avenue
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Size of the original xml file: &#39;</span><span class="p">,</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">getsize</span><span class="p">(</span><span class="n">OSMFILE</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">1024</span><span class="o">*</span><span class="mf">1024.0</span><span class="p">),</span> <span class="s1">&#39;MB&#39;</span><span class="p">)</span>
@@ -12254,7 +12258,7 @@ Foxworthy Ave =&gt; Foxworthy Avenue
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Size of the original xml file:  348.08773612976074 MB
-Size of the processed json file:  510.8454399108887 MB
+Size of the processed json file:  512.8097190856934 MB
 Number of documents: 19761132
 Number of nodes: 17470242
 Number of ways: 2290674
@@ -12273,13 +12277,20 @@ Number of pizza places: 636
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Additional-Ideas">Additional Ideas<a class="anchor-link" href="#Additional-Ideas">&#182;</a></h2>
+<h3 id="Contributor-statistics-and-gamification-suggestio">Contributor statistics and gamification suggestio<a class="anchor-link" href="#Contributor-statistics-and-gamification-suggestio">&#182;</a></h3><p>The contributions of users seems incredibly skewed, possibly due to automated versus manual map editing (the word “bot” appears in some usernames). Here are some user percentage statistics:</p>
+<ul>
+<li>Top user contribution percentage (“nmixter”) - 15.08%</li>
+<li>Combined top 2 users' contribution (“nmixter” and “andygol”) - 30.07%</li>
+<li>Combined Top 10 users contribution - 64.12%</li>
+</ul>
+<p>Thinking about these user percentages, I’m reminded of “gamification” as a motivating force for contribution. In the context of the OpenStreetMap, if user data were more prominently displayed, perhaps others would take an initiative in submitting more edits to the map. It's so surprise, the only top 10 users that contributed over than 50% of this dataset. That might spur the creation of more efficient bots, especially if certain gamification elements were present, such as rewards, badges, or a leaderboard.</p>
+<h4 id="Top-10-users-with-most-contributions">Top 10 users with most contributions<a class="anchor-link" href="#Top-10-users-with-most-contributions">&#182;</a></h4>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Top 10 users with most contributions</span>
@@ -12323,9 +12334,17 @@ Number of pizza places: 636
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Number-of-users-appearing-only-once-(having-1-post)">Number of users appearing only once (having 1 post)<a class="anchor-link" href="#Number-of-users-appearing-only-once-(having-1-post)">&#182;</a></h4><h5 id="There's-only-one-user-appearing-only-once.-Which-means-most-the-the-user-appear-at-least-once.">There's only one user appearing only once. Which means most the the user appear at least once.<a class="anchor-link" href="#There's-only-one-user-appearing-only-once.-Which-means-most-the-the-user-appear-at-least-once.">&#182;</a></h5>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Number of users appearing only once (having 1 post)</span>
@@ -12365,7 +12384,282 @@ Number of pizza places: 636
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Conclusion">Conclusion<a class="anchor-link" href="#Conclusion">&#182;</a></h2><p>I believe it has been cleaned for the purposes of this exercise. However, some area of the San Jose data is obviously far from being complete. There's still some data haven't clean likes Inconsistent postal codes (“NC28226”, “28226­0783”, “28226”) and “Incorrect” postal codes (Charlotte area zip codes all begin with “282” however a large portion of all documented zip codes were outside this region.)</p>
+<h4 id="Top-10-Biggest-religion">Top 10 Biggest religion<a class="anchor-link" href="#Top-10-Biggest-religion">&#182;</a></h4><h5 id="The-result-show-in-Sanjose-area,-the-Christian-is-one-of-the-biggest-religion.-The-the-seconds-largest-is-Unknown,-seem-like-the-record-is-missing.-Then-coming-to-the-third-largest-religion-is-jewish.">The result show in Sanjose area, the Christian is one of the biggest religion. The the seconds largest is Unknown, seem like the record is missing. Then coming to the third largest religion is jewish.<a class="anchor-link" href="#The-result-show-in-Sanjose-area,-the-Christian-is-one-of-the-biggest-religion.-The-the-seconds-largest-is-Unknown,-seem-like-the-record-is-missing.-Then-coming-to-the-third-largest-religion-is-jewish.">&#182;</a></h5>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Top 10 Biggest religion</span>
+<span class="n">pipeline</span> <span class="o">=</span> <span class="p">[{</span><span class="s2">&quot;$match&quot;</span><span class="p">:{</span><span class="s2">&quot;amenity&quot;</span><span class="p">:{</span><span class="s2">&quot;$exists&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">},</span> <span class="s2">&quot;amenity&quot;</span><span class="p">:</span><span class="s2">&quot;place_of_worship&quot;</span><span class="p">}},</span>
+            <span class="p">{</span><span class="s2">&quot;$group&quot;</span><span class="p">:{</span><span class="s2">&quot;_id&quot;</span><span class="p">:</span><span class="s2">&quot;$religion&quot;</span><span class="p">,</span> <span class="s2">&quot;count&quot;</span><span class="p">:{</span><span class="s2">&quot;$sum&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">}}},</span>
+            <span class="p">{</span><span class="s2">&quot;$sort&quot;</span><span class="p">:{</span><span class="s2">&quot;count&quot;</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">}},</span> <span class="p">{</span><span class="s2">&quot;$limit&quot;</span><span class="p">:</span><span class="mi">10</span><span class="p">}]</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">collection</span><span class="o">.</span><span class="n">aggregate</span><span class="p">(</span><span class="n">pipeline</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">next</span><span class="p">())</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;_id&#39;: &#39;christian&#39;, &#39;count&#39;: 1996}
+{&#39;_id&#39;: None, &#39;count&#39;: 139}
+{&#39;_id&#39;: &#39;jewish&#39;, &#39;count&#39;: 33}
+{&#39;_id&#39;: &#39;buddhist&#39;, &#39;count&#39;: 26}
+{&#39;_id&#39;: &#39;muslim&#39;, &#39;count&#39;: 18}
+{&#39;_id&#39;: &#39;hindu&#39;, &#39;count&#39;: 14}
+{&#39;_id&#39;: &#39;unitarian_universalist&#39;, &#39;count&#39;: 13}
+{&#39;_id&#39;: &#39;sikh&#39;, &#39;count&#39;: 7}
+{&#39;_id&#39;: &#39;caodaism&#39;, &#39;count&#39;: 7}
+{&#39;_id&#39;: &#39;zoroastrian&#39;, &#39;count&#39;: 7}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Top-10-appearing-amenities">Top 10 appearing amenities<a class="anchor-link" href="#Top-10-appearing-amenities">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Top 10 appearing amenities</span>
+<span class="n">pipeline</span> <span class="o">=</span> <span class="p">[{</span><span class="s2">&quot;$match&quot;</span><span class="p">:{</span><span class="s2">&quot;amenity&quot;</span><span class="p">:{</span><span class="s2">&quot;$exists&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">}}},</span> 
+            <span class="p">{</span><span class="s2">&quot;$group&quot;</span><span class="p">:{</span><span class="s2">&quot;_id&quot;</span><span class="p">:</span><span class="s2">&quot;$amenity&quot;</span><span class="p">,</span><span class="s2">&quot;count&quot;</span><span class="p">:{</span><span class="s2">&quot;$sum&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">}}},</span>
+            <span class="p">{</span><span class="s2">&quot;$sort&quot;</span><span class="p">:{</span><span class="s2">&quot;count&quot;</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">}},</span> <span class="p">{</span><span class="s2">&quot;$limit&quot;</span><span class="p">:</span><span class="mi">10</span><span class="p">}]</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">collection</span><span class="o">.</span><span class="n">aggregate</span><span class="p">(</span><span class="n">pipeline</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">next</span><span class="p">())</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;_id&#39;: &#39;&#39;, &#39;count&#39;: 3798126}
+{&#39;_id&#39;: &#39;parking&#39;, &#39;count&#39;: 12302}
+{&#39;_id&#39;: &#39;restaurant&#39;, &#39;count&#39;: 6573}
+{&#39;_id&#39;: &#39;fast_food&#39;, &#39;count&#39;: 3406}
+{&#39;_id&#39;: &#39;school&#39;, &#39;count&#39;: 3321}
+{&#39;_id&#39;: &#39;place_of_worship&#39;, &#39;count&#39;: 2298}
+{&#39;_id&#39;: &#39;bench&#39;, &#39;count&#39;: 1807}
+{&#39;_id&#39;: &#39;cafe&#39;, &#39;count&#39;: 1753}
+{&#39;_id&#39;: &#39;fuel&#39;, &#39;count&#39;: 1580}
+{&#39;_id&#39;: &#39;bicycle_parking&#39;, &#39;count&#39;: 1347}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Top-10-popular-cuisines">Top 10 popular cuisines<a class="anchor-link" href="#Top-10-popular-cuisines">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Top 10 popular cuisines</span>
+<span class="n">pipeline</span> <span class="o">=</span> <span class="p">[{</span><span class="s2">&quot;$match&quot;</span><span class="p">:{</span><span class="s2">&quot;amenity&quot;</span><span class="p">:{</span><span class="s2">&quot;$exists&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">},</span> <span class="s2">&quot;amenity&quot;</span><span class="p">:</span><span class="s2">&quot;restaurant&quot;</span><span class="p">}},</span>
+            <span class="p">{</span><span class="s2">&quot;$group&quot;</span><span class="p">:{</span><span class="s2">&quot;_id&quot;</span><span class="p">:</span><span class="s2">&quot;$cuisine&quot;</span><span class="p">,</span> <span class="s2">&quot;count&quot;</span><span class="p">:{</span><span class="s2">&quot;$sum&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">}}},</span>
+            <span class="p">{</span><span class="s2">&quot;$sort&quot;</span><span class="p">:{</span><span class="s2">&quot;count&quot;</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">}},</span> <span class="p">{</span><span class="s2">&quot;$limit&quot;</span><span class="p">:</span><span class="mi">10</span><span class="p">}]</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">collection</span><span class="o">.</span><span class="n">aggregate</span><span class="p">(</span><span class="n">pipeline</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">next</span><span class="p">())</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;_id&#39;: None, &#39;count&#39;: 1296}
+{&#39;_id&#39;: &#39;&#39;, &#39;count&#39;: 572}
+{&#39;_id&#39;: &#39;mexican&#39;, &#39;count&#39;: 570}
+{&#39;_id&#39;: &#39;chinese&#39;, &#39;count&#39;: 504}
+{&#39;_id&#39;: &#39;vietnamese&#39;, &#39;count&#39;: 459}
+{&#39;_id&#39;: &#39;pizza&#39;, &#39;count&#39;: 390}
+{&#39;_id&#39;: &#39;japanese&#39;, &#39;count&#39;: 293}
+{&#39;_id&#39;: &#39;american&#39;, &#39;count&#39;: 283}
+{&#39;_id&#39;: &#39;italian&#39;, &#39;count&#39;: 222}
+{&#39;_id&#39;: &#39;indian&#39;, &#39;count&#39;: 214}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Sort-postcodes-by-count,-descending">Sort postcodes by count, descending<a class="anchor-link" href="#Sort-postcodes-by-count,-descending">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Sort postcodes by count, descending</span>
+<span class="n">pipeline</span> <span class="o">=</span> <span class="p">[{</span><span class="s2">&quot;$match&quot;</span><span class="p">:{</span><span class="s2">&quot;address.postcode&quot;</span><span class="p">:{</span><span class="s2">&quot;$exists&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">}}},</span> 
+            <span class="p">{</span><span class="s2">&quot;$group&quot;</span><span class="p">:{</span><span class="s2">&quot;_id&quot;</span><span class="p">:</span><span class="s2">&quot;$address.postcode&quot;</span><span class="p">,</span> <span class="s2">&quot;count&quot;</span><span class="p">:{</span><span class="s2">&quot;$sum&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">}}},</span> 
+            <span class="p">{</span><span class="s2">&quot;$sort&quot;</span><span class="p">:{</span><span class="s2">&quot;count&quot;</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">}}]</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">collection</span><span class="o">.</span><span class="n">aggregate</span><span class="p">(</span><span class="n">pipeline</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">next</span><span class="p">())</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;_id&#39;: &#39;&#39;, &#39;count&#39;: 1893917}
+{&#39;_id&#39;: &#39;95014&#39;, &#39;count&#39;: 3503}
+{&#39;_id&#39;: &#39;95070&#39;, &#39;count&#39;: 2438}
+{&#39;_id&#39;: &#39;94087&#39;, &#39;count&#39;: 2205}
+{&#39;_id&#39;: &#39;94086&#39;, &#39;count&#39;: 2052}
+{&#39;_id&#39;: &#39;95051&#39;, &#39;count&#39;: 1772}
+{&#39;_id&#39;: &#39;95129&#39;, &#39;count&#39;: 1397}
+{&#39;_id&#39;: &#39;95127&#39;, &#39;count&#39;: 1130}
+{&#39;_id&#39;: &#39;95054&#39;, &#39;count&#39;: 1023}
+{&#39;_id&#39;: &#39;95035&#39;, &#39;count&#39;: 1018}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Sort-street-by-count,-descending">Sort street by count, descending<a class="anchor-link" href="#Sort-street-by-count,-descending">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Sort street by count, descending</span>
+<span class="n">pipeline</span> <span class="o">=</span> <span class="p">[{</span><span class="s2">&quot;$match&quot;</span><span class="p">:{</span><span class="s2">&quot;address.street&quot;</span><span class="p">:{</span><span class="s2">&quot;$exists&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">}}},</span>
+            <span class="p">{</span><span class="s2">&quot;$group&quot;</span><span class="p">:{</span><span class="s2">&quot;_id&quot;</span><span class="p">:</span><span class="s2">&quot;$address.street&quot;</span><span class="p">,</span> <span class="s2">&quot;count&quot;</span><span class="p">:{</span><span class="s2">&quot;$sum&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">}}},</span>
+            <span class="p">{</span><span class="s2">&quot;$sort&quot;</span><span class="p">:{</span><span class="s2">&quot;count&quot;</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">}}]</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">collection</span><span class="o">.</span><span class="n">aggregate</span><span class="p">(</span><span class="n">pipeline</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">next</span><span class="p">())</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;_id&#39;: &#39;&#39;, &#39;count&#39;: 1885122}
+{&#39;_id&#39;: &#39;Stevens Creek Boulevard&#39;, &#39;count&#39;: 2898}
+{&#39;_id&#39;: &#39;Hollenbeck Avenue&#39;, &#39;count&#39;: 1745}
+{&#39;_id&#39;: &#39;South Stelling Road&#39;, &#39;count&#39;: 1300}
+{&#39;_id&#39;: &#39;East Estates Drive&#39;, &#39;count&#39;: 1230}
+{&#39;_id&#39;: &#39;Johnson Avenue&#39;, &#39;count&#39;: 1200}
+{&#39;_id&#39;: &#39;Miller Avenue&#39;, &#39;count&#39;: 1170}
+{&#39;_id&#39;: &#39;Bollinger Road&#39;, &#39;count&#39;: 1170}
+{&#39;_id&#39;: &#39;North Santa Cruz Avenue&#39;, &#39;count&#39;: 1160}
+{&#39;_id&#39;: &#39;South De Anza Boulevard&#39;, &#39;count&#39;: 1127}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Additional-Ideas">Additional Ideas<a class="anchor-link" href="#Additional-Ideas">&#182;</a></h2><h2 id="Conclusion">Conclusion<a class="anchor-link" href="#Conclusion">&#182;</a></h2><p>I believe it has been cleaned for the purposes of this exercise. However, some area of the San Jose data is obviously far from being complete. There's still some data haven't clean likes Inconsistent postal codes (“NC28226”, “28226­0783”, “28226”) and “Incorrect” postal codes (Charlotte area zip codes all begin with “282” however a large portion of all documented zip codes were outside this region.)</p>
+<h2 id="References">References<a class="anchor-link" href="#References">&#182;</a></h2><p>[1] OpenStreetMap Sample Project Data Wrangling with MongoDB (Matthew Banbury). Available from: <a href="https://docs.google.com/document/d/1F0Vs14oNEs2idFJR3C_OPxwS6L0HPliOii-QpbmrMo4/pub">https://docs.google.com/document/d/1F0Vs14oNEs2idFJR3C_OPxwS6L0HPliOii-QpbmrMo4/pub</a></p>
 
 </div>
 </div>
